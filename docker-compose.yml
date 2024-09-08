@@ -1,17 +1,17 @@
-version: "3.8"
-
 services:
-  runejs_game_server:
+  runejs:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        PUID: ${PUID}
+        PGID: ${PGID}
     volumes:
       - ./data:/usr/src/app/data
       - ./cache:/usr/src/app/cache
       - ./config:/usr/src/app/config
     ports:
+      - "43591:43591"
+      - "43592:43592"
       - "43594:43594"
-
-networks:
-  default:
-    name: runejs_network
+    restart: always

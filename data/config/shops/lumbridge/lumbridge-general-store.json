@@ -60,6 +60,11 @@
         "itemKey": "rs:hammer",
         "amount": 5,
         "restock": 100
+      },
+      {
+        "itemKey": "rs:logs",
+        "amount": 0,
+        "restock": 100
       }
     ]
   }

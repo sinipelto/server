@@ -1,0 +1,12 @@
+# Common vars for all scripts
+
+p_this=$(readlink -f "${0}")
+p_path=$(dirname "${this}")
+
+project="runejs"
+
+# Failsafe if which does not work
+binn=$(which docker)
+binn="${binn:=/usr/local/bin/docker} compose"
+
+dockf="${path}/docker-compose.yml"
